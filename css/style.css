@@ -16,12 +16,47 @@ body
 	color: #090;
 }
 
+.green2{
+color:#66AF33;
+}
+
 .orange {
 	color: #C60;
 }
 
 .white {
 	color: #FFF;
+}
+
+.marquee-container {
+  width: 100%;
+  height: 250px; /* Adjust height as needed */
+  overflow: hidden;
+  position: relative;
+  background-color: #f8f9fa;
+  border: 3px solid #66AF33;
+ 
+}
+
+.marquee-content {
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+  animation: scrollUp 25s linear infinite;
+}
+
+@keyframes scrollUp {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-100%);
+  }
+}
+
+.marquee-content h4 {
+  margin: 15px 0;
+  color: #333;
 }
 
 /* start page container */
@@ -389,9 +424,19 @@ h1 { margin: 0; }
   {
     background: #303030;
     padding: 10px;
+    margin-bottom: 20px;
   }
 #team .team_description h5
   {
+    font-size: 10px;
+    font-weight: bold;
+    color: #66AF33;
+	padding-bottom: 10px;
+  }
+  #team .team_description h5 a
+  {
+    font-size: 10px;
+    font-weight: bold;
     color: #66AF33;
 	padding-bottom: 10px;
   }
@@ -469,7 +514,7 @@ ul
   {
     color: #66AF33;
     font-weight: bold;
-    padding: 0 0 10px 0;
+    padding: 20px 0 10px 0;
     margin: 0 0 10px 0;
   }
 #service
@@ -567,6 +612,7 @@ ul
   }
 #work .work_thumb .work_overlay
     {
+      padding-top: 40%;
       background: #FFFFFF;
       opacity: 0;
       position: absolute;
@@ -577,6 +623,9 @@ ul
       -webkit-transition: all 0.4s ease-in-out;
               transition: all 0.4s ease-in-out;
     }
+#work .work_thumb .work_overlay h5{
+  font-weight: bold;
+}
 #work .work_thumb .work_overlay .fa
   {
     background: #66AF33;
@@ -673,7 +722,7 @@ ul
 
 #contact
   {
-    background: #404040 url('../images/contact-bg.jpg') no-repeat;
+    background: #404040 url('../images/contact.jpg') no-repeat;
     background-size: cover;
     background-attachment: fixed;
     color: #FFFFFF;
